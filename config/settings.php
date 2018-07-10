@@ -46,7 +46,7 @@ $GLOBALS['settings'] = [
             'user' => 'root',
             'pass' => '',
             'server' => 'localhost',
-            'db' => 'dbtest'
+            'db' => ''
         ]
     ]
 ];
