@@ -42,6 +42,15 @@ DEFINE ('CONTROLLER_DIRECTORY', dirname(getcwd()) . DIRECTORY_SEPARATOR . SRC . 
 // TEMPLATE DIRECTORY
 DEFINE ('TEMPLATE_DIRECTORY', PARENT_DIRECTORY . SRC . TEMPLATE . DIRECTORY_SEPARATOR);
 
+// CSS DIRECTORY
+DEFINE ('CSS_DIR', "/" . BASE_DIR . "/root/css/");
+
+// IMAGE DIRECTORY
+DEFINE ('IMG_DIR', "/" . BASE_DIR . "/root/img/");
+
+// JAVASCRIPT DIRECTORY
+DEFINE ('JS_DIR', "/" . BASE_DIR . "/root/js/");
+
 /**
  * @param Array $folder - Holds information regarding folder locations
  */

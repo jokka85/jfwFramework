@@ -299,23 +299,31 @@ namespace Controller {
                     asort($args);
                     $this->html = $this->set($args, $this->html);
                 }
-                
-                // SET APP NAME
-                $this->html = $this->set(['APP_NAME' => $this->settings['APP_NAME']], $this->html);
-                
-                // CHECK IF A TITLE HAS BEEN SET
-                if(strpos($this->html, '<{title}>')){
-                    $this->html = $this->set(['title' => $this->settings['DEFAULT_TITLE']], $this->html);
-                }
-                
-                // create runtime counter
-                $_SESSION['stop'] = microtime(true);
-                $runtime = $_SESSION['stop'] - $_SESSION['start'];
-
-                $this->html = $this->set(['runtime' => $runtime], $this->html);
             }
             
+            $this->setGlobal();
+            
             $this->display($args);
+            
+        }
+        
+        private function setGlobal(){
+            
+            // CHECK IF A TITLE HAS BEEN SET
+            if(strpos($this->html, '<{title}>')){
+                $this->html = $this->set(['title' => $this->settings['DEFAULT_TITLE']], $this->html);
+            }
+            
+            // create runtime counter
+            $_SESSION['stop'] = microtime(true);
+            $runtime = $_SESSION['stop'] - $_SESSION['start'];
+            
+            // SET APP NAME
+            $this->html = $this->set(['APP_NAME' => $this->settings['APP_NAME']], 
+                $this->set(['__CSS_DIR__' => CSS_DIR], 
+                        $this->set(['runtime' => $runtime], 
+                                $this->html)
+                    ));
             
         }
 
