@@ -1,0 +1,2 @@
+jFW is a lightweight Php Framework. It is designed to implement the MVC framework but with minimum dependencies initially. 
+Additional functionality can be added in but jFW will work by itself for any small projects.
