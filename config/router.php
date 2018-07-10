@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * 
+ * config/router.php
+ * 
+ * Routes as needed to various locations within the MVC
+ * 
+ */
+
+$routes = [
+    
+    // INDEX / HOME
+    "/" => 'Default',
+    "home" => 'Default',
+    
+    // ERROR PAGE
+    "Error" => 'Error'
+    
+];
+

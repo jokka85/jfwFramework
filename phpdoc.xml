@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>jFW Framework Documentation</title>
+    <parser>
+        <target>reference/docs</target>
+    </parser>
+    <transformer>
+        <target>reference/docs</target>
+    </transformer>
+    <files>
+        <directory>.</directory> <!-- Scan and parse all the php files except those found in the paths below -->
+        <ignore>tests/*</ignore>
+        <ignore>src/*</ignore>
+        <ignore>vendor/*</ignore>
+        <ignore>index.php</ignore> <!-- Ignore all the index.php files -->
+    </files>
+</phpdoc>

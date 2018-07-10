@@ -1,0 +1,5 @@
+<?php
+
+use Database\Table\Table;
+
+return new Table();
