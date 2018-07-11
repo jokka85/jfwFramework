@@ -8,9 +8,9 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
 {
     public static $files = array (
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        'a89510c3bd02b136e703b0c01969fded' => __DIR__ . '/../..' . '/core/Controller/Controller.php',
-        'a1094f9aba148dde7c696efe16f2a5d3' => __DIR__ . '/../..' . '/core/Controller/ControllerInterface.php',
-        '71de120775bb10caa21dc085c67dd526' => __DIR__ . '/../..' . '/config/settings.php',
+        '5812dcab832cfcc1e218d5c562ba7424' => __DIR__ . '/../..' . '/core/Controller/Controller.php',
+        '4dfbcbcb8b2706eca93d046e3a0d7b60' => __DIR__ . '/../..' . '/core/Controller/ControllerInterface.php',
+        '0fec8df516d4f339cc5ba4bfe2fcf7ca' => __DIR__ . '/../..' . '/config/settings.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -31,6 +31,7 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
             'Database\\Table\\' => 15,
+            'Database\\Paginator\\' => 19,
             'Database\\' => 9,
         ),
     );
@@ -59,6 +60,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
         'Database\\Table\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core/Database',
+        ),
+        'Database\\Paginator\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core/Database',
         ),

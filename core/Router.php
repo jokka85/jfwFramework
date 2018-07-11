@@ -60,10 +60,26 @@ namespace Router{
              */
             $page = '';
             
+            // IS THE LAST OCCURENCE SPECIFIC GET REQUESTS??
+            $count = count($this->dirs);
+            if(strpos($this->dirs[$count - 1], '?') !== FALSE){
+                
+                $var = explode("&", substr($this->dirs[$count - 1], 1));
+                
+                foreach($var as $v){
+                    list($key,$value) = explode("=", $v);
+                    $_GET[(strpos($key, "amp;") !== FALSE) ? str_replace("amp;", "", $key) : $key] = $value;
+                }
+                
+                unset($this->dirs[$count - 1]);
+                
+                $this->dirs[0] = (($count - 1 ) == 0) ? "" : $this->dirs[0];
+            }
+            
             // NAME OF THE REQUESTED CONTROLLER
             // $name will be used to attempt to locate title within $this->routes
             $name = ($this->dirs[0] == '' || $this->dirs[0] == null) ? "/" : $this->dirs[0];
-                 
+                             
             // if the name exists within the routes, send to appropriate location
             if(array_key_exists($name, $this->routes)){
                                 

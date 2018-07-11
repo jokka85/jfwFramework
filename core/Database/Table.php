@@ -46,21 +46,42 @@ namespace Database\Table {
         public $db;
         
         /**
+         * @var Array
+         * Holds the configuration that was called
+         */
+        private $config;
+        
+        /**
          * @var String 
          * Table Name 
          */
         private $table;
         
         /**
+         * @var Object | Null
+         * If paginator object isn't set, then it remains null.
+         */
+        private $_paginator = null;
+        
+        /**
          * __construct($config = null)
          * 
-         * During creationg of the table object, you can send a configuration 
+         * During creation of the table object, you can send a configuration 
          * title as well to use a separate database configuration.
          * 
          * @param String $config - Name of database configuration to use
          */
         function __construct($config = null){
+            $this->config = $config;
             $this->db = new Database($config);
+        }
+        
+        /**
+         * Tell the Table if you need the results Paginated or not
+         * @param Boolean $paginator
+         */
+        public function setPaginator($paginator = null){
+            $this->_paginator = (!is_null($paginator)) ? $paginator : null;
         }
         
         /**
@@ -184,7 +205,7 @@ namespace Database\Table {
                 // ADD ANY ADDITIONAL OPTIONS
                 foreach($options as $key => $value){
                     switch ($key){
-
+                        
                         case 'LIMIT':
                             $q .= "LIMIT " . $value;
                             break;
@@ -199,6 +220,11 @@ namespace Database\Table {
 
                     }
                 }
+            }
+            
+            if(!is_null($this->_paginator)){
+                $this->_paginator->set($this->config, $q);
+                $q = $this->_paginator->get();
             }
                         
             // WE NOW HAVE A FULL QUERY

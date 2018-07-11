@@ -1,9 +1,10 @@
 <{body}>
+<{__PAGINATOR__}>
 
 <!-- TEST LOOP -->
 <{LOOP}>
 <p>
-    KEY: <{KEY}><br/>
+    ID: <{ID}><br/>
     VALUE: <{VALUE}>
 </p>
 <{/LOOP}>

@@ -26,6 +26,7 @@
         "psr-4": {
             "Database\\" : "core/Database/",
             "Database\\Table\\" : "core/Database/",
+            "Database\\Paginator\\" : "core/Database/",
             "Router\\" : "core/"
         }
     }

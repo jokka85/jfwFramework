@@ -55,7 +55,7 @@ namespace Database {
                     $databases['user'], 
                     $databases['pass'],
                     array(PDO::ATTR_PERSISTENT => true));
-                                    
+                       
         }
         
         /**
@@ -85,13 +85,20 @@ namespace Database {
             try{
                 $db = $this->con->prepare($query);
 
-                foreach($args as $key => $value){
-                    $db->bindValue(":".$key, $value);
+                if(!is_null($args)){
+                    foreach($args as $key => $value){
+                        $db->bindValue(":".$key, $value);
+                    }
                 }
-
-                if($db->execute($args)){                    
+                                
+                if($db->execute($args)){     
                     return $db;
                 } else {
+                    echo "ERROR: <br/>";
+                    foreach($db->errorInfo() as $v){
+                        echo " -- " . $v . "<br/>";
+                    }
+                    $db->closeCursor();
                     return null;
                 }
                 

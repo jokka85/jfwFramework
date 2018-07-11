@@ -8,6 +8,7 @@
  */
 
 use Controller\Controller;
+use Database\Paginator\Paginator;
 
 class DefaultController extends Controller implements ControllerInterface {
     
@@ -22,8 +23,14 @@ class DefaultController extends Controller implements ControllerInterface {
      */
     public function index() {
         
-        $this->Default->setTable('invoice_category');
-                
+        // CREATE PAGINATOR
+        $paginator = new Paginator();
+        
+        //$this->Default->setTable('invoice_category');
+        $this->Default->setTable('dummy_table');
+        $this->Default->setPaginator($paginator);
+            
+        /*
         $where = [
             'invoice_cat_id' =>
             [
@@ -34,19 +41,24 @@ class DefaultController extends Controller implements ControllerInterface {
         $stmt = $this->Default->get(
                 ['invoice_cat_title'], 
                 $where);
+         * 
+         */
+        
+        $stmt = $this->Default->get();
         
         $rows = $this->Default->getDB()->fetchAll($stmt);
         
+        $stmt->closeCursor();
+        
         $args = [
             'title' => 'Test Title',
-            'body' => '<h1>IT WORKED!</h1>'
+            'body' => '<h1>IT WORKED!</h1>',
+            '__PAGINATOR__' => $paginator->linker()
         ];
         
+        
         foreach($rows as $value){
-            foreach($value as $key => $v){
-                $args['LOOP'][] = ['KEY' => $key, 'VALUE' => $v];
-            }
-            
+            $args['LOOP'][] = ['ID' => $value['dummy_id'], 'VALUE' => $value['dummy_vars']];            
         }
                 
         // FOR TEST PURPOSES
