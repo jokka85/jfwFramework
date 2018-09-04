@@ -23,13 +23,13 @@ namespace Router{
     class Router {
         
         /**
-         * @var Array 
+         * @var array
          * Routes, as provided by the config/router.php file 
          */
         private $routes;
         
         /**
-         * @var Array 
+         * @var array
          * Directories, as provided by config/required.php file 
          */
         private $dirs;
