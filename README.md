@@ -5,11 +5,11 @@ Additional functionality can be added in but jFW will work by itself for any sma
 
 ## Getting Started
 
-Currently, the only way to download all of the files is to either create a clone of the git repository or download the files directly from bitbucket.
+Currently, the only way to obtain all of the files is to either create a clone of the git repository or download the files directly.
 
 ### Prerequisites
 
-The current configuration has only been tested on the fllowing
+The current configuration has only been tested on the following
 ```
 PHP 7.0
 Apache 2.4.23
@@ -18,11 +18,11 @@ Mysql 5.7.4
 
 ### Installing
 
-Currently, the only way to download all of the files is to either create a clone of the git repository or download the files directly from bitbucket.
+Currently, the only way to obtain all of the files is to either create a clone of the git repository or download the files directly.
 
 ## Authors
 
-* **Joshua Weeks** - *Initial work* - [jFW](https://bitbucket.org/jokka85)
+* **Joshua Weeks** - *Initial work* - [jFW](https://github.org/jokka85)
 
 ## License
 
