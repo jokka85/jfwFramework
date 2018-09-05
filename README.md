@@ -7,6 +7,14 @@ Additional functionality can be added in but jFW will work by itself for any sma
 
 Currently, the only way to obtain all of the files is to either create a clone of the git repository or download the files directly.
 
+Your sever needs the minimum requirements of Apache, Php, and MySQL (although MySQL can be optional).
+
+Once in place, there are two SQL files you can use if you wish to maintain settings from the database instead of the configuration files. One is within the **config** folder and the other is in the **config/settings** folder. If you choose to use the database, it is suggested to use both of these SQL files as templates for the tables. 
+
+Using the database isn't necessary however. You can simply edit the files within the **config/settings** folder manually if you desire and achieve the same effect.
+
+Once these settings are in place you can begin programming your site as needed.
+
 ### Prerequisites
 
 The current configuration has only been tested on the following
@@ -15,10 +23,6 @@ PHP 7.0
 Apache 2.4.23
 Mysql 5.7.4
 ```
-
-### Installing
-
-Currently, the only way to obtain all of the files is to either create a clone of the git repository or download the files directly.
 
 ## Authors
 
