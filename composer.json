@@ -1,15 +1,16 @@
 {
-    "name": "jFW Php",
+    "name": "jokka85/jfwFramework",
     "description": "jFW is a Php Framework designed for ease of implementation.",
+    "require": {
+        "php": "^5.3.3 || ^7.0"
+    },
+    
     "authors": [
         {
             "name": "Josh Weeks",
             "email": "jokka85@gmail.com"
         }
-    ],
-    
-    "require": {
-    },
+    ],    
     
     "require-dev": {
         "phpunit/phpunit": "^6"
