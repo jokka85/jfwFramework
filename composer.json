@@ -1,5 +1,5 @@
 {
-    "name": "jokka85/jfwFramework",
+    "name": "jokka85/jfw-framework",
     "description": "jFW is a Php Framework designed for ease of implementation.",
     "require": {
         "php": "^5.3.3 || ^7.0"
