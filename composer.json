@@ -1,0 +1,40 @@
+{
+    "name": "jFW Php",
+    "description": "jFW is a Php Framework designed for ease of implementation.",
+    "authors": [
+        {
+            "name": "Josh Weeks",
+            "email": "jokka85@gmail.com"
+        }
+    ],
+    
+    "require": {
+    },
+    
+    "require-dev": {
+        "phpunit/phpunit": "^6"
+    },
+    
+    "autoload": {
+        
+        "files": [            
+            "core/Controller/Controller.php",
+            "core/Controller/ControllerInterface.php",
+            "config/settings/settings.php",
+            "core/Database/Users.php",
+            "core/MessageDisplay.php",
+            "core/BreadCrumbs.php",
+            "core/Form.php"
+        ],
+        
+        "psr-4": {
+            "Database\\" : "core/Database/",
+            "Database\\Table\\" : "core/Database/",
+            "Database\\Paginator\\" : "core/Database/",
+            "Database\\Table\\QueryBuilder\\" : "core/Database/",
+            "AdminSettings\\" : "core/",
+            "ErrorHandler\\" : "core/",
+            "Router\\" : "core/"
+        }
+    }
+}

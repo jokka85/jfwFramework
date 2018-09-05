@@ -1,0 +1,93 @@
+/**
+    CSS for default page
+*/
+
+.defaultMain {
+    background-image: -webkit-radial-gradient(ellipse, black, red);
+    background-image: -moz-radial-gradient(ellipse, black, red);
+    background-image: -webkit-radial-gradient(ellipse, black, red);
+}
+
+.defaultFoot {
+    background-image: -webkit-linear-gradient(red, black);
+    background-image: -moz-linear-gradient(red, black);
+    background-image: -webkit-linear-gradient(red, black);
+    
+    padding: 0px 20px 0px 20px !important;
+}
+
+.defaultTitle {
+    background-image: radial-gradient(ellipse, gray, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cardLeft {
+    background-image: -webkit-linear-gradient(left, red, black);
+    background-image: -moz-linear-gradient(left, red, black);
+    background-image: -webkit-linear-gradient(left,red, black);
+    
+    color: #fff;
+    text-shadow: 0px 0px 8px #000;
+    text-transform: capitalize;
+}
+
+.cardRight {
+    background-image: -webkit-linear-gradient(right, red, black);
+    background-image: -moz-linear-gradient(right, red, black);
+    background-image: -webkit-linear-gradient(right,red, black);
+    
+    color: #fff;
+    text-shadow: 0px 0px 8px #000;
+    text-transform: capitalize;
+}
+
+/**
+ DIV classes for the messages to be displayed.
+ */
+
+.msg_box {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.msg_head {
+    font-size: x-large;
+    text-align: center;
+    color: #ffffff;;
+}
+
+.msg_body {
+    font-size: small;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.success {
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    color: #000000;
+}
+
+.error {
+    border: 1px solid darkred;
+    background-color: red;
+    color: #ffffff;
+}
+
+.warning {
+    border: 1px solid orangered;
+    background-color: orange;
+    color: #000000;
+}
+
+.login-bg {
+    background-color: lightblue !important;
+    background: url("../img/login-bg.jpg") no-repeat center;
+    background-blend-mode: screen;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

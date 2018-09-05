@@ -9,10 +9,11 @@ return array(
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Router\\' => array($baseDir . '/core'),
+    'ErrorHandler\\' => array($baseDir . '/core'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Database\\Table\\' => array($baseDir . '/core/Database'),
+    'Database\\Paginator\\' => array($baseDir . '/core/Database'),
     'Database\\' => array($baseDir . '/core/Database'),
-    'Controller\\getController\\' => array($baseDir . '/core/Controller'),
-    'Controller\\Controller\\' => array($baseDir . '/core/Controller'),
+    'AdminSettings\\' => array($baseDir . '/core'),
 );

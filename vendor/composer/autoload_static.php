@@ -10,7 +10,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '5812dcab832cfcc1e218d5c562ba7424' => __DIR__ . '/../..' . '/core/Controller/Controller.php',
         '4dfbcbcb8b2706eca93d046e3a0d7b60' => __DIR__ . '/../..' . '/core/Controller/ControllerInterface.php',
-        '0fec8df516d4f339cc5ba4bfe2fcf7ca' => __DIR__ . '/../..' . '/config/settings.php',
+        'a5d7cc0030cab3c42496469ebb1e9f04' => __DIR__ . '/../..' . '/config/settings/settings.php',
+        '9e4b3f074bac74226310633b32e4c98a' => __DIR__ . '/../..' . '/core/Database/Users.php',
+        'a38d479c53f72987d2e1f0f4bfa9c582' => __DIR__ . '/../..' . '/core/MessageDisplay.php',
+        '2fb780f61171d30b5a0dc9cfe88d5c9b' => __DIR__ . '/../..' . '/core/Form.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -26,6 +29,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
         array (
             'Router\\' => 7,
         ),
+        'E' => 
+        array (
+            'ErrorHandler\\' => 13,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
@@ -33,6 +40,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
             'Database\\Table\\' => 15,
             'Database\\Paginator\\' => 19,
             'Database\\' => 9,
+        ),
+        'A' => 
+        array (
+            'AdminSettings\\' => 14,
         ),
     );
 
@@ -48,6 +59,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
         ),
         'Router\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core',
+        ),
+        'ErrorHandler\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core',
         ),
@@ -70,6 +85,10 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
         'Database\\' => 
         array (
             0 => __DIR__ . '/../..' . '/core/Database',
+        ),
+        'AdminSettings\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core',
         ),
     );
 
@@ -587,6 +606,9 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
         'SebastianBergmann\\Diff\\Differ' => __DIR__ . '/..' . '/sebastian/diff/src/Differ.php',
         'SebastianBergmann\\Diff\\Exception' => __DIR__ . '/..' . '/sebastian/diff/src/Exception/Exception.php',
         'SebastianBergmann\\Diff\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/diff/src/Exception/InvalidArgumentException.php',
+        'SebastianBergmann\\Diff\\LCS\\LongestCommonSubsequence' => __DIR__ . '/..' . '/sebastian/diff/src/LCS/LongestCommonSubsequence.php',
+        'SebastianBergmann\\Diff\\LCS\\MemoryEfficientImplementation' => __DIR__ . '/..' . '/sebastian/diff/src/LCS/MemoryEfficientLongestCommonSubsequenceImplementation.php',
+        'SebastianBergmann\\Diff\\LCS\\TimeEfficientImplementation' => __DIR__ . '/..' . '/sebastian/diff/src/LCS/TimeEfficientLongestCommonSubsequenceImplementation.php',
         'SebastianBergmann\\Diff\\Line' => __DIR__ . '/..' . '/sebastian/diff/src/Line.php',
         'SebastianBergmann\\Diff\\LongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/sebastian/diff/src/LongestCommonSubsequenceCalculator.php',
         'SebastianBergmann\\Diff\\MemoryEfficientLongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/sebastian/diff/src/MemoryEfficientLongestCommonSubsequenceCalculator.php',
@@ -602,7 +624,7 @@ class ComposerStaticInite8c4a46667ab80af7e96062a5346b2a5
         'SebastianBergmann\\Exporter\\Exporter' => __DIR__ . '/..' . '/sebastian/exporter/src/Exporter.php',
         'SebastianBergmann\\GlobalState\\Blacklist' => __DIR__ . '/..' . '/sebastian/global-state/src/Blacklist.php',
         'SebastianBergmann\\GlobalState\\CodeExporter' => __DIR__ . '/..' . '/sebastian/global-state/src/CodeExporter.php',
-        'SebastianBergmann\\GlobalState\\Exception' => __DIR__ . '/..' . '/sebastian/global-state/src/exceptions/Exception.php',
+        'SebastianBergmann\\GlobalState\\Exception' => __DIR__ . '/..' . '/sebastian/global-state/src/Exception.php',
         'SebastianBergmann\\GlobalState\\Restorer' => __DIR__ . '/..' . '/sebastian/global-state/src/Restorer.php',
         'SebastianBergmann\\GlobalState\\RuntimeException' => __DIR__ . '/..' . '/sebastian/global-state/src/exceptions/RuntimeException.php',
         'SebastianBergmann\\GlobalState\\Snapshot' => __DIR__ . '/..' . '/sebastian/global-state/src/Snapshot.php',
