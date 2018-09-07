@@ -59,7 +59,8 @@ namespace Router{
              * Page Name
              */
             $page = '';
-            
+			
+			
             // IS THE LAST OCCURENCE SPECIFIC GET REQUESTS??
             $count = count($this->dirs);
             if(strpos($this->dirs[$count - 1], '?') !== FALSE){
@@ -124,30 +125,19 @@ namespace Router{
         private function cleanDirs(){
             
             // GET THE REQUESTED URI
-            $requestURI = htmlspecialchars($_SERVER['REQUEST_URI']);
-            
+            $requestURI = str_replace("/" . str_replace(array("\\","/"), "/", BASE_DIR), "", 
+                              htmlspecialchars($_SERVER['REQUEST_URI']));
+			
             $DIR_LIST = explode("/", $requestURI);
             
-            // IF WE AREN'T IN THE PARENT FOLDER THEN PROCEED TO THRU IF STATEMENT
-            if(BASE_DIR != false || BASE_DIR != DIRECTORY_SEPARATOR){
-            
-                // LOOP THROUGH DIRECTORY TO SORT THE STRUCTURE ACCORDINGLY
-                foreach($DIR_LIST as $key => $v){
-                    
-                    $value = $v;
-                    // remove key
-                    unset($DIR_LIST[$key]);
-                    
-                    if($value == BASE_DIR){
-                        // remove everything before
-                        break;
-                    }
-                }
-                
+            if((is_null($DIR_LIST[0]) || empty($DIR_LIST[0])) && count($DIR_LIST) > 1){
+                unset($DIR_LIST[0]);
+		$DIR_LIST = array_values($DIR_LIST);
             }
             
             // reset keys and set to variable     
-            $this->dirs = array_merge($DIR_LIST);            
+            $this->dirs = array_merge($DIR_LIST);
+		
         }
         
         /**

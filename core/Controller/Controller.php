@@ -282,16 +282,18 @@ namespace Controller {
             // IF NONE EXISTS, USE DEFAULT TABLE CLASS
             
             $className = str_replace("Controller", "", get_called_class());
-            
+			            
             $tableName = $className . "Table";
-            
-            $filePath = PARENT_DIRECTORY . SRC . MODEL . TABLE . $tableName . ".php";
+			
+			$dirPath = substr(getcwd(), 0, -5) . DIRECTORY_SEPARATOR . SRC . MODEL . TABLE;
+			
+			$filePath = $dirPath . $tableName . ".php";
             
             if(file_exists($filePath)){
                 include_once($filePath);
-                $this->Table = new $tableName();
+                $this->$className = new $tableName();
             } else {
-                $this->Table = new Table();
+                $this->$className = new Table();
             }
 
             // Create filtered list of loaded classes

@@ -31,10 +31,8 @@ class TestController extends Controller implements ControllerInterface {
         $this->finalize($args);
     }
     
-    public function test($arg){
-
-        if(strlen(implode("", $arg)) > 0){ var_dump($arg); }
-        
+    public function test(...$arg){
+		
         $this->finalize();
     }
 
