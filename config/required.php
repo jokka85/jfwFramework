@@ -10,10 +10,12 @@
  */
 
 // DETERMINE BASE WITH THE CONCEPT THAT WE WILL ALWAYS LOAD FROM THE 'ROOT' FOLDER
-$base = explode(DIRECTORY_SEPARATOR, dirname(getcwd()));
+$path = str_replace($_SERVER['DOCUMENT_ROOT'], '', 
+        str_replace($_SERVER['HTTP_HOST'] . "/", '', 
+                $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']));
 
 // BASE DIRECTORY
-DEFINE('BASE_DIR', $base[count($base) - 1]);
+DEFINE('BASE_DIR', dirname(dirname($path)));
 
 // PARENT DIRECTORY
 DEFINE ('PARENT_DIRECTORY', ".." . DIRECTORY_SEPARATOR);
