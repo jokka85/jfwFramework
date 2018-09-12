@@ -5,7 +5,12 @@ Additional functionality can be added in but jFW will work by itself for any sma
 
 ## Getting Started
 
-Currently, the only way to obtain all of the files is to either create a clone of the git repository or download the files directly.
+You can install in one of two ways.
+
+* (Current Pre-Release) Using composer: composer create-project 
+jokka85/jfw-framework:v0.16-alpha app-folder
+
+* Download / Clone from repository
 
 Your sever needs the minimum requirements of Apache, Php, and MySQL (although MySQL can be optional).
 
